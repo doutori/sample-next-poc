@@ -1,5 +1,5 @@
 {
-  "name": "@apps/yak-hq",
+  "name": "apps/yak-hq",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier '{pages,src}/**/*.{js,ts,tsx}'"
+    "lint:fix": "pnpm run lint --fix",
+    "format": "prettier '{pages,src}/**/*.{js,ts,tsx}'",
+    "format:fix": "pnpm run format --write"
   },
   "dependencies": {
     "@types/node": "18.11.10",
