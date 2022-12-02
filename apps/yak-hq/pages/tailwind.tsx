@@ -1,4 +1,3 @@
-import { styled } from '@stitches/react'
 import { MainLayout } from '../src/layouts/main'
 import { FC, PropsWithChildren } from 'react'
 

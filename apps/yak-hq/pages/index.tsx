@@ -4,9 +4,6 @@ export default function Home() {
   return (
     <ul>
       <li>
-        <Link href="/stitches">Stitches</Link>
-      </li>
-      <li>
         <Link href="/tailwind">Tailwind</Link>
       </li>
       <li>
