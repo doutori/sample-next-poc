@@ -7,8 +7,8 @@ export default function Tailwind() {
     <MainLayout>
       <form className="flex flex-col gap-3">
         <div className="flex gap-2">
-          <label htmlFor="email">薬局名</label>
-          <input className="border round" name="pharmacy_name" type="text" />
+          <label htmlFor="pharmacy_name">薬局名</label>
+          <input className="border rounded" name="pharmacy_name" type="text" />
         </div>
 
         <fieldset>
@@ -26,7 +26,7 @@ export default function Tailwind() {
         </fieldset>
 
         <div>
-          <Button>Sign In</Button>
+          <Button>Submit</Button>
         </div>
       </form>
     </MainLayout>

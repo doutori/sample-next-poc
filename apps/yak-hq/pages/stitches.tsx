@@ -6,8 +6,8 @@ export default function Stitches() {
     <MainLayout>
       <Form>
         <div style={{ display: 'flex', gap: '12px' }}>
-          <label htmlFor="email">薬局名</label>
-          <input name="pharmacy_name" type="text" />
+          <label htmlFor="pharmacy_name">薬局名</label>
+          <TextInput name="pharmacy_name" type="text" />
         </div>
 
         <fieldset>
@@ -25,7 +25,7 @@ export default function Stitches() {
         </fieldset>
 
         <div>
-          <Button>Sign In</Button>
+          <Button>Submit</Button>
         </div>
       </Form>
     </MainLayout>
@@ -38,12 +38,15 @@ const Form = styled('form', {
   gap: '16px',
 })
 
+const TextInput = styled('input', {
+  border: '1px solid #ddd',
+  borderRadius: '0.25em',
+})
+
 const Button = styled('button', {
-  backgroundColor: 'gainsboro',
-  borderRadius: '12px',
+  color: 'white',
+  backgroundColor: 'rgb(14 165 233)',
+  borderRadius: '0.25em',
   border: 0,
-  padding: '12px 32px',
-  '&:hover': {
-    backgroundColor: 'lightgray',
-  },
+  padding: '0.5em 1.5em',
 })
