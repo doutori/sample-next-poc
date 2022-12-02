@@ -33,7 +33,7 @@ export default function Tailwind() {
   )
 }
 
-const Button: FC<PropsWithChildren> = ({ children }) => (
+export const Button: FC<PropsWithChildren> = ({ children }) => (
   <button className="text-white px-6 py-2 bg-sky-500 rounded">
     {children}
   </button>

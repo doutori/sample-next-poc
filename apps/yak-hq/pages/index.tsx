@@ -5,7 +5,12 @@ export default function Home() {
     <ul>
       <li>
         <Link href="/stitches">Stitches</Link>
+      </li>
+      <li>
         <Link href="/tailwind">Tailwind</Link>
+      </li>
+      <li>
+        <Link href="/react-hook-form">ReactHookForm</Link>
       </li>
     </ul>
   )

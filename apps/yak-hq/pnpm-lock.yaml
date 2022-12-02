@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@hookform/resolvers': ^2.9.10
   '@stitches/react': ^1.2.8
   '@types/node': 18.11.10
   '@types/react': 18.0.25
@@ -11,8 +12,10 @@ specifiers:
   postcss: ^8.4.19
   react: 18.2.0
   react-dom: 18.2.0
+  react-hook-form: ^7.40.0
   tailwindcss: ^3.2.4
   typescript: 4.9.3
+  zod: ^3.19.1
 
 dependencies:
   '@types/node': 18.11.10
@@ -25,10 +28,13 @@ dependencies:
   typescript: 4.9.3
 
 devDependencies:
+  '@hookform/resolvers': 2.9.10_react-hook-form@7.40.0
   '@stitches/react': 1.2.8_react@18.2.0
   autoprefixer: 10.4.13_postcss@8.4.19
   postcss: 8.4.19
+  react-hook-form: 7.40.0_react@18.2.0
   tailwindcss: 3.2.4_postcss@8.4.19
+  zod: 3.19.1
 
 packages:
 
@@ -46,6 +52,14 @@ packages:
     dependencies:
       regenerator-runtime: 0.13.11
     dev: false
+
+  /@hookform/resolvers/2.9.10_react-hook-form@7.40.0:
+    resolution: {integrity: sha512-JIL1DgJIlH9yuxcNGtyhsWX/PgNltz+5Gr6+8SX9fhXc/hPbEIk6wPI82nhgvp3uUb6ZfAM5mqg/x7KR7NAb+A==}
+    peerDependencies:
+      react-hook-form: ^7.0.0
+    dependencies:
+      react-hook-form: 7.40.0_react@18.2.0
+    dev: true
 
   /@next/env/13.0.5:
     resolution: {integrity: sha512-F3KLtiDrUslAZhTYTh8Zk5ZaavbYwLUn3NYPBnOjAXU8hWm0QVGVzKIOuURQ098ofRU4e9oglf3Sj9pFx5nI5w==}
@@ -1511,6 +1525,15 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-hook-form/7.40.0_react@18.2.0:
+    resolution: {integrity: sha512-0rokdxMPJs0k9bvFtY6dbcSydyNhnZNXCR49jgDr/aR03FDHFOK6gfh8ccqB3fl696Mk7lqh04xdm+agqWXKSw==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: true
+
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
@@ -1840,4 +1863,8 @@ packages:
   /yaml/1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
+    dev: true
+
+  /zod/3.19.1:
+    resolution: {integrity: sha512-LYjZsEDhCdYET9ikFu6dVPGp2YH9DegXjdJToSzD9rO6fy4qiRYFoyEYwps88OseJlPyl2NOe2iJuhEhL7IpEA==}
     dev: true

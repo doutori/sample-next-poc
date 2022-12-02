@@ -14,11 +14,11 @@ export default function Stitches() {
           <legend>事業の種類</legend>
           <div style={{ display: 'flex', gap: '20px' }}>
             <label>
-              <input name="kind" type="radio" />
+              <input name="kind" type="radio" value="0" />
               法人
             </label>
             <label>
-              <input name="kind" type="radio" />
+              <input name="kind" type="radio" value="1" />
               個人
             </label>
           </div>
