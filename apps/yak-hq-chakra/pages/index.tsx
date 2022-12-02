@@ -1,61 +1,70 @@
-import { SubmitHandler, useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
+import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import {
-  Button,
+  Box,
   Container,
-  Input,
-  FormControl,
   FormLabel,
+  FormControl,
+  Input,
+  Button,
   Radio,
   RadioGroup,
-  Box,
   Stack,
   VStack,
 } from '@chakra-ui/react'
+import { z } from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
 
 const schema = z.object({
-  pharmacy_name: z.string(),
+  name: z.string(),
   kind: z.string(),
 })
 
 type Schema = z.infer<typeof schema>
 
-export default function Home() {
-  const { handleSubmit, register } = useForm<Schema>({
-    resolver: zodResolver(schema),
-  })
-  const onSubmit: SubmitHandler<Schema> = (data) => console.log(data)
+export default function Sample() {
+  const {
+    control,
+    handleSubmit,
+    register,
+    formState: { errors, isSubmitting },
+  } = useForm<Schema>({ resolver: zodResolver(schema) })
+
+  const onSubmit: SubmitHandler<Schema> = (values) => console.log(values)
 
   return (
     <Container py={8}>
-      <form className="flex flex-col gap-3" onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <VStack spacing={6}>
           <Box w="100%">
             <FormControl>
-              <FormLabel htmlFor="pharmacy_name">薬局名</FormLabel>
-              <Input {...register('pharmacy_name')} />
+              <FormLabel htmlFor="name">薬局名</FormLabel>
+              <Input id="name" placeholder="MICIN薬局" {...register('name')} />
             </FormControl>
           </Box>
-
           <Box w="100%">
             <FormControl as="fieldset">
               <FormLabel as="legend">事業の種類</FormLabel>
-              <RadioGroup>
-                <Stack spacing={4} direction="row">
-                  <Radio {...register('kind')} value="0">
-                    法人
-                  </Radio>
-                  <Radio {...register('kind')} value="1">
-                    個人
-                  </Radio>
-                </Stack>
-              </RadioGroup>
+              <Controller
+                name="kind"
+                control={control}
+                render={({ field }) => {
+                  const { onChange, value } = field
+                  return (
+                    <RadioGroup onChange={onChange} value={value}>
+                      <Stack direction="row">
+                        <Radio value="1">法人</Radio>
+                        <Radio value="2">個人</Radio>
+                      </Stack>
+                    </RadioGroup>
+                  )
+                }}
+              />
             </FormControl>
           </Box>
-
           <Box>
-            <Button>Submit</Button>
+            <Button mt={4} isLoading={isSubmitting} type="submit">
+              Submit
+            </Button>
           </Box>
         </VStack>
       </form>
