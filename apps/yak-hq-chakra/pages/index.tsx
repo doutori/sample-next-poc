@@ -1,5 +1,5 @@
 import { Container } from '@chakra-ui/react'
-import { SampleForm } from '../src/components/SampleForm'
+import { SampleForm } from '~/components/SampleForm'
 
 export default function Sample() {
   return (

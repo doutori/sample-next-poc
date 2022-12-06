@@ -1,4 +1,3 @@
-import { FC } from 'react'
 import {
   Box,
   Button,
@@ -10,8 +9,10 @@ import {
   Stack,
   VStack,
 } from '@chakra-ui/react'
-import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { FC } from 'react'
+
+import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import { z } from 'zod'
 
 const schema = z.object({
