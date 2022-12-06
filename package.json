@@ -2,7 +2,7 @@
   "name": "sample-next-poc",
   "version": "1.0.0",
   "description": "",
-  "packageManager": "pnpm@7.17.1",
+  "packageManager": "pnpm@7.18.0",
   "scripts": {},
   "keywords": [],
   "author": "",
